@@ -1,7 +1,7 @@
 /**This program computeFactorialNum accepts two program argument num1 and num2
  *calculate factorial
  * @Author Patharanan Papakang
- * @version 1.0,16/1/2020
+ * @version 1.0,16/1/2022
  * ID: 643040207-4
  * Sec: 2
  */
