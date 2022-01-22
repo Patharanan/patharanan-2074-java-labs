@@ -74,9 +74,7 @@ public class studentGPA {
     double totalGrade = 0; //The total grade entered by the user.
     Scanner input = new Scanner(System.in);
     while (true) {
-      System.out.println(
-        "Type 'a' for accumulated GPA, 's' for specific semester, and 'q' to quit"
-      );
+      System.out.println("Type 'a' for accumulated GPA, 's' for specific semester, and 'q' to quit");
       String userInput = input.nextLine();
 
       if (userInput.equals("a")) {
