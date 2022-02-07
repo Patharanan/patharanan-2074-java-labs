@@ -72,29 +72,12 @@ public class PersonV2 extends Person {
       LocalDate startDate = dob;
       LocalDate endtDate = bill.dob;
       Period period = Period.between(startDate, endtDate);
-      System.out.println(
-        name +
-        period.getYears() +
-        " years " +
-        period.getMonths() +
-        " months and " +
-        period.getDays() +
-        " days older than " +
-        bill.name
-      );
+      System.out.println(name + period.getYears() + " years " + period.getMonths() + " months and " + period.getDays() + " days older than " + bill.name );
     } else {
       LocalDate startDate = bill.dob;
       LocalDate endtDate = dob;
       Period period = Period.between(startDate, endtDate);
-      System.out.println(
-        "Bull Gate is " +
-        period.getYears() +
-        " years " +
-        period.getMonths() +
-        " months and " +
-        period.getDays() +
-        " days older than Mark Zuckerberg"
-      );
+      System.out.println("Bull Gate is " + period.getYears() + " years " + period.getMonths() + " months and " + period.getDays() + " days older than Mark Zuckerberg");
     }
   }
 
@@ -104,10 +87,10 @@ public class PersonV2 extends Person {
    */
   public void isBirthday() {
     LocalDate today = LocalDate.now();
-    if (dob.getMonth() == dateNow.getMonth() && dob.getDayOfMonth() == dateNow.getDayOfMonth()) {
+    if (dob.getMonth() == today.getMonth() && dob.getDayOfMonth() == today.getDayOfMonth()) {
       System.out.println("Today is NOT " + name + "'s Birthday.");
     } else {
-      System.out.println("Today is " + name + "'s Birthday.");
+      System.out.println("Today is NOT " + name + "'s Birthday.");
     }
   }
 
