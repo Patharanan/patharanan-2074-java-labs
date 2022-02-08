@@ -88,7 +88,7 @@ public class PersonV2 extends Person {
   public void isBirthday() {
     LocalDate today = LocalDate.now();
     if (dob.getMonth() == today.getMonth() && dob.getDayOfMonth() == today.getDayOfMonth()) {
-      System.out.println("Today is NOT " + name + "'s Birthday.");
+      System.out.println("Today is " + name + "'s Birthday.");
     } else {
       System.out.println("Today is NOT " + name + "'s Birthday.");
     }
