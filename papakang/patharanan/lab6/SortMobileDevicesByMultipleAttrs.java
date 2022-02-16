@@ -47,7 +47,7 @@ public class SortMobileDevicesByMultipleAttrs
   class SortByStorage implements Comparator<MobileDevice> {
 
     /**
-     *Compare the storage of two devices
+     * *Compare the storage of two devices.*
      *
      * @param device1 The first object to compare.
      * @param device2 The object to compare to device1.
