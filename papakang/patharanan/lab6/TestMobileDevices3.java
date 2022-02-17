@@ -12,7 +12,7 @@ import java.util.*;
 public class TestMobileDevices3 {
 
   public static void main(String[] args) {
-    ArrayList mobileDevices = new ArrayList<MobileDevice>();
+    ArrayList<MobileDevice> mobileDevices = new ArrayList<MobileDevice>();
     mobileDevices.add(new IPadAir("Rose Gold", 19900.0, 64.0));
     mobileDevices.add(new IPadAir("Silver", 24900.0, 256.0));
     mobileDevices.add(new IPadAir("Black", 24900.0, 256.0));
