@@ -56,7 +56,7 @@ public class MobileDeviceFromV2 extends MobileDeviceFromV1 {
     reviewTxtArea = new JTextArea(5, 30);
     reviewTxtArea.setLineWrap(true);
     reviewTxtArea.setWrapStyleWord(true);
-    reviewTxtArea.append(
+    reviewTxtArea.setText(
       "The iPhone 13’s brighter display, longer battery life and powerful cameras make it the best iPhone for the money. But we wish it had faster charging and the iPhone 13 Pro’s adaptive 120Hz display."
     );
 

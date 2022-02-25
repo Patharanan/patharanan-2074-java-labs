@@ -25,7 +25,6 @@ public class MobileDeviceFromV4 extends MobileDeviceFromV3 {
 
   protected void addSubMenus() {
     configMenu.removeAll();
-    configMenu.addSeparator();
 
     redColorItem = new JMenuItem("Red");
     greenColorItem = new JMenuItem("Green");
