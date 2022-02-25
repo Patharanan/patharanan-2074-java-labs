@@ -5,7 +5,7 @@ import papakang.patharanan.lab7.MobileDeviceFromV3;
 
 public class MobileDeviceFromV4 extends MobileDeviceFromV3 {
 
-  protected JMenuItem redColorItem, greenColorItem, blueColorItem, size16Item, size20Item, size24Item;
+  protected JMenuItem redColorItem, greenColorItem, blueColorItem, size16Item, size20Item, size24Item, menuItemFile;
   protected ImageIcon newImgIcon;
 
   public MobileDeviceFromV4(String titel) {
@@ -19,12 +19,13 @@ public class MobileDeviceFromV4 extends MobileDeviceFromV3 {
   }
 
   protected void updateMenuIcon() {
-    newImgIcon = new ImageIcon("images/new.png");
+    newImgIcon = new ImageIcon("images/new.jpg");
     newItem.setIcon(newImgIcon);
   }
 
   protected void addSubMenus() {
-    super.addMenus();
+    configMenu.removeAll();
+    configMenu.addSeparator();
 
     redColorItem = new JMenuItem("Red");
     greenColorItem = new JMenuItem("Green");
@@ -53,6 +54,7 @@ public class MobileDeviceFromV4 extends MobileDeviceFromV3 {
       "Mobile Device From V4"
     );
     mobileDeviceFromV4.addComponents();
+    mobileDeviceFromV4.addMenus();
     mobileDeviceFromV4.setFrameFeatures();
   }
 
