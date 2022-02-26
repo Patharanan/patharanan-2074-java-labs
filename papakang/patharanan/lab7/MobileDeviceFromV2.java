@@ -17,6 +17,7 @@ public class MobileDeviceFromV2 extends MobileDeviceFromV1 {
   protected JLabel typeLabel, reviewLabel;
   protected JComboBox typeComboBox;
   protected JTextArea reviewTxtArea;
+  protected JScrollPane scrollPane;
 
   public MobileDeviceFromV2(String titel) {
     super(titel);
@@ -63,7 +64,9 @@ public class MobileDeviceFromV2 extends MobileDeviceFromV1 {
     reviewPanel.setLayout(new BorderLayout());
     // This is adding the reviewLabel and reviewTxtArea to the reviewPanel.
     reviewPanel.add(reviewLabel, BorderLayout.PAGE_START);
-    reviewPanel.add(reviewTxtArea, BorderLayout.CENTER);
+
+    scrollPane = new JScrollPane(reviewTxtArea);
+    reviewPanel.add(scrollPane);
 
     // This is adding the typePanel and reviewPanel to the centerPanel.
     centerPanel.add(typePanel, BorderLayout.PAGE_START);

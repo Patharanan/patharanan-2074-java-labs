@@ -19,11 +19,13 @@ public class MobileDeviceFromV4 extends MobileDeviceFromV3 {
   }
 
   protected void updateMenuIcon() {
-    newImgIcon = new ImageIcon("images/new.jpg");
+    fileMenu.removeAll();
+    newImgIcon = new ImageIcon("images/new.png");
     newItem.setIcon(newImgIcon);
   }
 
   protected void addSubMenus() {
+    super.addComponents();
     configMenu.removeAll();
 
     redColorItem = new JMenuItem("Red");

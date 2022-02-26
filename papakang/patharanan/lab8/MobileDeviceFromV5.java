@@ -1,17 +1,18 @@
 package papakang.patharanan.lab8;
 
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.*;
 import javax.swing.*;
 
 public class MobileDeviceFromV5 extends MobileDeviceFromV4 {
+
+  protected Font font14Plain, font14Bold;
 
   public MobileDeviceFromV5(String titel) {
     super(titel);
     //TODO Auto-generated constructor stub
   }
 
-  public void addComponents() {
+  protected void addComponents() {
     super.addComponents();
     this.setFormValues();
     this.setFontsColors();
@@ -33,21 +34,23 @@ public class MobileDeviceFromV5 extends MobileDeviceFromV4 {
   }
 
   protected void setFontsColors() {
-    txtBrand.setFont(new Font("SansSerif", Font.BOLD, 14));
-    txtModel.setFont(new Font("SansSerif", Font.BOLD, 14));
-    txtColor.setFont(new Font("SansSerif", Font.BOLD, 14));
-    txtWeight.setFont(new Font("SansSerif", Font.BOLD, 14));
-    txtPrice.setFont(new Font("SansSerif", Font.BOLD, 14));
-    reviewTxtArea.setFont(new Font("SansSerif", Font.BOLD, 14));
+    font14Bold = new Font("SansSerif", Font.BOLD, 14);
+    txtBrand.setFont(font14Bold);
+    txtModel.setFont(font14Bold);
+    txtColor.setFont(font14Bold);
+    txtWeight.setFont(font14Bold);
+    txtPrice.setFont(font14Bold);
+    reviewTxtArea.setFont(font14Bold);
 
-    brandNameLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-    modelNameLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-    colorLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-    weightLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-    priceLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-    mobileLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-    typeLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-    reviewLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
+    font14Plain = new Font("SansSerif", Font.PLAIN, 14);
+    brandNameLabel.setFont(font14Plain);
+    modelNameLabel.setFont(font14Plain);
+    colorLabel.setFont(font14Plain);
+    weightLabel.setFont(font14Plain);
+    priceLabel.setFont(font14Plain);
+    mobileLabel.setFont(font14Plain);
+    typeLabel.setFont(font14Plain);
+    reviewLabel.setFont(font14Plain);
 
     cancelButton.setForeground(Color.RED);
     okButton.setForeground(Color.BLUE);
