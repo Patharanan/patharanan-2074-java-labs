@@ -1,4 +1,6 @@
-/**
+/**This program implement the program called MobileDeviceFormV6  which extends from MobileDeviceFormV5
+ * Add a  panel that contains the label “Features:”
+ * Add a panel that extends from JPanel that draws an image
  * @Auther Patharanan Papakang
  * @Version 1 27,Feb 2022
  */

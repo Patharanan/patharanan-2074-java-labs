@@ -1,4 +1,5 @@
-/**
+/**This program add an icon for menu New and add submenus
+ * Implement the program called MobileDeviceFormV4  which extends from MobileDeviceFormV3
  * @Auther Patharanan Papakang
  * @Version 1 25,Feb 2022
  */

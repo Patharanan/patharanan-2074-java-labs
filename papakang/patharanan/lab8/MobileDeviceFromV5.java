@@ -1,4 +1,6 @@
-/**
+/**Implement the program called MobileDeviceFormV5  which extends from MobileDeviceFormV4
+ * In this program  will set the font and color of components such that the program
+ * Set the values of text fields and the text area
  * @Auther Patharanan Papakang
  * @Version 1 25,Feb 2022
  */
