@@ -1,3 +1,7 @@
+/**
+ * @Auther Patharanan Papakang
+ * @Version 1 25,Feb 2022
+ */
 package papakang.patharanan.lab8;
 
 import javax.swing.*;
@@ -8,25 +12,37 @@ public class MobileDeviceFromV4 extends MobileDeviceFromV3 {
   protected JMenuItem redColorItem, greenColorItem, blueColorItem, size16Item, size20Item, size24Item, menuItemFile;
   protected ImageIcon newImgIcon;
 
+  // This is the constructor of the class. It calls the constructor of the superclass.
   public MobileDeviceFromV4(String titel) {
     super(titel);
   }
 
+  /**
+   * Add the menu icon and submenus to the menu
+   */
   protected void addComponents() {
     super.addComponents();
     updateMenuIcon();
     addSubMenus();
   }
 
+  /**
+   * It removes all the items in the menu.
+   * and add image icon for file menu.
+   */
   protected void updateMenuIcon() {
     fileMenu.removeAll();
     newImgIcon = new ImageIcon("images/new.png");
     newItem.setIcon(newImgIcon);
   }
 
+  /**
+   * This method it calls the method addComponents of the superclass.
+   * and add submenu in the config menu is color and size.
+   */
   protected void addSubMenus() {
     super.addComponents();
-    configMenu.removeAll();
+    configMenu.removeAll(); //It removes all the items in the menu.
 
     redColorItem = new JMenuItem("Red");
     greenColorItem = new JMenuItem("Green");

@@ -1,3 +1,7 @@
+/**
+ * @Auther Patharanan Papakang
+ * @Version 1 25,Feb 2022
+ */
 package papakang.patharanan.lab8;
 
 import java.awt.*;
@@ -5,19 +9,29 @@ import javax.swing.*;
 
 public class MobileDeviceFromV5 extends MobileDeviceFromV4 {
 
+  // Creating two instance variables of the Font class.
   protected Font font14Plain, font14Bold;
 
+  // This is the constructor of the class. It calls the constructor of the superclass.
   public MobileDeviceFromV5(String titel) {
     super(titel);
-    //TODO Auto-generated constructor stub
   }
 
+  /**
+   * this method is call method setFormValues and method setFrontsColors.
+   */
   protected void addComponents() {
     super.addComponents();
     this.setFormValues();
     this.setFontsColors();
   }
 
+  /**
+   * This method set the form values of txtBrand,txtModel,txtColor,txtWeight,txtPrice
+   * Set text of reviewTxtArea.
+   * Set JRadiobutton to IOSJRB.
+   * Set typeComboBox to Tablet
+   */
   protected void setFormValues() {
     txtBrand.setText("Apple");
     txtModel.setText("iPad Air");
@@ -33,7 +47,13 @@ public class MobileDeviceFromV5 extends MobileDeviceFromV4 {
     typeComboBox.setSelectedItem("Tablet");
   }
 
+  /**
+   * Set the fonts  text fields
+   * Set color of button.
+   */
   protected void setFontsColors() {
+    // This is creating a new font object with the name "SansSerif", the font style is bold, and the
+    // font size is 14.
     font14Bold = new Font("SansSerif", Font.BOLD, 14);
     txtBrand.setFont(font14Bold);
     txtModel.setFont(font14Bold);
@@ -42,6 +62,8 @@ public class MobileDeviceFromV5 extends MobileDeviceFromV4 {
     txtPrice.setFont(font14Bold);
     reviewTxtArea.setFont(font14Bold);
 
+    // This is creating a new font object with the name "SansSerif", the font style is plain, and the
+    // font size is 14.
     font14Plain = new Font("SansSerif", Font.PLAIN, 14);
     brandNameLabel.setFont(font14Plain);
     modelNameLabel.setFont(font14Plain);
@@ -52,6 +74,7 @@ public class MobileDeviceFromV5 extends MobileDeviceFromV4 {
     typeLabel.setFont(font14Plain);
     reviewLabel.setFont(font14Plain);
 
+    // This is setting the color cancelButton for red and okBUtton for blue.
     cancelButton.setForeground(Color.RED);
     okButton.setForeground(Color.BLUE);
   }

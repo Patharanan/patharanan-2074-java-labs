@@ -1,3 +1,7 @@
+/**
+ * @Auther Patharanan Papakang
+ * @Version 1 27,Feb 2022
+ */
 package papakang.patharanan.lab8;
 
 import java.awt.*;
@@ -18,7 +22,6 @@ public class MobileDeviceFromV6 extends MobileDeviceFromV5 {
 
   public MobileDeviceFromV6(String titel) {
     super(titel);
-    //TODO Auto-generated constructor stub
   }
 
   @Override
