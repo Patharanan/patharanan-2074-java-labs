@@ -10,7 +10,9 @@ import papakang.patharanan.lab7.MobileDeviceFromV3;
 
 public class MobileDeviceFromV4 extends MobileDeviceFromV3 {
 
+  // Creating a variable for each item in the submenu.
   protected JMenuItem redColorItem, greenColorItem, blueColorItem, size16Item, size20Item, size24Item, menuItemFile;
+  // Creating a variable for each item in the submenu.
   protected ImageIcon newImgIcon;
 
   // This is the constructor of the class. It calls the constructor of the superclass.

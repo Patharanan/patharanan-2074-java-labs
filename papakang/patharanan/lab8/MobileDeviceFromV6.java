@@ -17,15 +17,24 @@ import javax.swing.JPanel;
 
 public class MobileDeviceFromV6 extends MobileDeviceFromV5 {
 
+  // Creating a panel that contains the image.
   protected JPanel drawPanel, featuresPanel;
+  // Creating a label called featuresLabel and set it to protected.
   protected JLabel featuresLabel;
+  // This is creating a list of features.
   protected JList featuresList;
+  // Creating an array of strings.
   protected String[] featuresArray;
 
   public MobileDeviceFromV6(String titel) {
     super(titel);
   }
 
+  /**
+   * This Method is creating an array of strings add list to the features panel.
+   *  Add the features panel to the total panel
+   * Set font
+   */
   @Override
   protected void addComponents() {
     super.addComponents();
@@ -33,6 +42,7 @@ public class MobileDeviceFromV6 extends MobileDeviceFromV5 {
     featuresPanel = new JPanel();
     featuresPanel.setLayout(new BorderLayout());
 
+    // Creating an array of strings.
     featuresArray =
       new String[] {
         "10.9-inch display",
@@ -54,6 +64,9 @@ public class MobileDeviceFromV6 extends MobileDeviceFromV5 {
     totalPanel.add(featuresPanel, BorderLayout.SOUTH);
   }
 
+  /**
+   *  Add a panel that extends from JPanel that draws an image read from the specified file.
+   */
   public class ReadImages extends JPanel {
 
     BufferedImage img;
@@ -61,6 +74,8 @@ public class MobileDeviceFromV6 extends MobileDeviceFromV5 {
     public void paint(Graphics graphics) {
       graphics.drawImage(img, 0, 0, null);
     }
+
+    // A constructor that read the image from the specified file.
 
     public ReadImages() {
       try {
@@ -71,6 +86,11 @@ public class MobileDeviceFromV6 extends MobileDeviceFromV5 {
       }
     }
 
+    /**
+     * Returns the preferred size of the image
+     *
+     * @return The preferred size of the image.
+     */
     public Dimension getPreferredSize() {
       if (img == null) {
         return new Dimension(100, 100);
@@ -80,6 +100,9 @@ public class MobileDeviceFromV6 extends MobileDeviceFromV5 {
     }
   }
 
+  /**
+   * Create a new instance of the MobileDeviceFromV6 class and show it
+   */
   public static void createAndShowGUI() {
     MobileDeviceFromV6 mobileDeviceFromV6 = new MobileDeviceFromV6(
       "Mobile Device From V6"
