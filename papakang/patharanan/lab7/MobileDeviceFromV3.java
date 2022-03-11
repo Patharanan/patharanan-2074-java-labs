@@ -8,7 +8,7 @@ package papakang.patharanan.lab7;
 import javax.swing.*;
 import javax.swing.JMenuBar;
 
-public class MobileDeviceFromV3 extends MobileDeviceFromV2 {
+public class MobileDeviceFromV3 extends MobileDeviceFormV2 {
 
   protected JMenuBar menuBar = new JMenuBar();
   protected JMenu fileMenu = new JMenu("File"); //creates a new menu bar named File.
@@ -58,7 +58,7 @@ public class MobileDeviceFromV3 extends MobileDeviceFromV2 {
   }
 
   public static void createAndShowGUI() {
-    MobileDeviceFromV3 msw = new MobileDeviceFromV3("Mobile Device Fromo V3");
+    MobileDeviceFromV3 msw = new MobileDeviceFromV3("Mobile Device Form V3");
     msw.addComponents();
     msw.addMenus();
     msw.setFrameFeatures();
