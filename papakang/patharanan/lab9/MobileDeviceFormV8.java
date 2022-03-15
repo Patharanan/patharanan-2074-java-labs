@@ -21,43 +21,31 @@ public class MobileDeviceFormV8
    *  a dialog will be displayed showing the message.
    * if should android button will be showing "Mobile OS is updated to Android"
    * if should ios button will be showing "Mobile OS is updated to ios"
+   *  a dialog will be display showing the message as show
+   *which item in the combo box are selected
    */
   public void itemStateChanged(ItemEvent e) {
-    AbstractButton button = (AbstractButton) e.getItemSelectable();
+    Object src = e.getSource();
 
-    String string;
     if (e.getStateChange() == ItemEvent.SELECTED) {
-      String radioButton = button.getActionCommand(); //Returns the action command for this button.
-      if (radioButton.equals("ios")) { //Compares this string to the "ios".
-        string = "Mobile OS is updated to ios";
+      if (src == iOSJRB || src == androidJRB) { //Compares this string to the "ios".
+        String string =
+          "Mobile OS is updated to " +
+          mobileGrp.getSelection().getActionCommand();
         JOptionPane.showMessageDialog(null, string);
-      } else if (radioButton.equals("Androind")) { //Compares this string to the "Androind".
-        string = "Mobile OS is updated to Android"; // message dialog
+      } else if (src == typeComboBox) { //which item in the combo box are selected
+        String string = "Type is updated to  " + typeComboBox.getSelectedItem();
         JOptionPane.showMessageDialog(null, string); // show message dialog
       }
     }
   }
 
-  /**
-   * actionevent the event to be processed
-   * a dialog will be display showing the message as show
-   *which item in the combo box are selected
-   */
-  ActionListener typeComboBoxActionListener = new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-      String selectTypeComboboxMassageDialog =
-        "Type is updated to " + typeComboBox.getSelectedItem().toString();
-      JOptionPane.showMessageDialog(null, selectTypeComboboxMassageDialog); // show message dialog
-    }
-  };
-
   @Override
   public void addListeners() {
     super.addListeners();
+    typeComboBox.addItemListener(this);
     androidJRB.addItemListener(this);
     iOSJRB.addItemListener(this);
-    typeComboBox.addActionListener(typeComboBoxActionListener);
   }
 
   public static void createAndShowGUI() {
