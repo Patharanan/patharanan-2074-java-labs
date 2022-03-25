@@ -1,3 +1,10 @@
+/**This program add menu "Area" that consists of the radio button menu items “Foreground” and “Background”
+ * When the area is selected as “Foreground”, the user selects the color as “Red”, “Green”, or “Blue”.  Then,
+ * the program then will change the foreground colors of all components accordingly
+ * When the user chooses the menu “Custom color”, the app will open the color chooser
+ * @Auther Patharanan Papakang
+ * @Version 1 24,11 Mar,2022
+ */
 package papakang.patharanan.lab10;
 
 import java.awt.Color;

@@ -1,3 +1,8 @@
+/**This program add the menu item “Custom …” for menu “Color”
+ * and set mnemonic and accelerator keys for a menu item
+ * @Auther Patharanan Papakang
+ * @Version 1 22,11 Mar,2022
+ */
 package papakang.patharanan.lab10;
 
 import java.awt.Toolkit;
@@ -15,12 +20,18 @@ public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
     //TODO Auto-generated constructor stub
   }
 
+  /**
+   * Add a menu item to the color menu that allows the user to select a custom color
+   */
   protected void addSubMenus() {
     super.addSubMenus();
     customColorItem = new JMenuItem("Custom...");
     colorSubMenu.add(customColorItem);
   }
 
+  /**
+   * * Set the mnemonic for each menu item
+   */
   protected void setMenuMnemonic() {
     fileMenu.setMnemonic(KeyEvent.VK_F);
     newItem.setMnemonic(KeyEvent.VK_N);
@@ -36,7 +47,7 @@ public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
   }
 
   /**
-   * set menu accelerator
+   * set menu accelerator  for each menu item
    */
   protected void setMenuAccelerator() {
     KeyStroke ctrlN = KeyStroke.getKeyStroke(

@@ -1,3 +1,11 @@
+/**This program  is menu items Red, Green, and Blue are selected, all the text’s’ colors change to the selected color.
+ * and When the menu items font sizes 16, 20, and 24 are selected, all the text’s sizes change to the selected size number
+ *  An open file chooser dialog is shown when the menu item Open is selected.
+ *   A save file chooser dialog is shown when the menu item Save is selected.
+ * @Auther Patharanan Papakang
+ * @Version 1 21,11 Mar,2022
+ */
+
 package papakang.patharanan.lab10;
 
 import java.awt.*;
@@ -11,6 +19,7 @@ import papakang.patharanan.lab9.MobileDeviceFormV9;
 public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
 
   // This is a way to declare a protected member variable.
+  protected JFileChooser fileChooser, saveChooser;
   protected Font font16Plain, font20Plain, font24Plain;
 
   public MobileDeviceFormV10(String titel) {
@@ -70,41 +79,41 @@ public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
     if (e.getSource() == redColorItem) { //when event is redColorItem
       //calling method setColor to set text color to red color.
       setColor(Color.red);
-    } else if (e.getSource() == blueColorItem) { //when event is blueColorItem
+    } else if (e.getSource() == blueColorItem) {
       //calling method setColor to set text color to blue color.
       setColor(Color.blue);
-    } else if (e.getSource() == greenColorItem) { //when event is greenColorItem
+    } else if (e.getSource() == greenColorItem) {
       //calling method setColor to set text color to green color.
       setColor(Color.green);
-    } else if (e.getSource() == size16Item) { //when event is size16Item
+    } else if (e.getSource() == size16Item) {
       //call method setFont and size of font is 16
       setFont(16);
-    } else if (e.getSource() == size20Item) { //when event is size20Item
+    } else if (e.getSource() == size20Item) {
       //call method setFont and size of font is 20
       setFont(20);
-    } else if (e.getSource() == size24Item) { //when event is size24Item
+    } else if (e.getSource() == size24Item) {
       //call method setFont and size of font is 24
       setFont(24);
     } else if (e.getSource() == openItem) {
-      JFileChooser fileChooser = new JFileChooser();
-      int option = fileChooser.showOpenDialog(this);
+      fileChooser = new JFileChooser();
+      int option = fileChooser.showOpenDialog(this); // Showing a dialog box to select the file to open.
       if (option == JFileChooser.APPROVE_OPTION) {
         File file = fileChooser.getSelectedFile(); //Returns the selected file.
-        String string = "Opening:" + file.getName(); //messageg dialog "Opening:" + file name
+        String string = "Opening:" + file.getName(); //a dialog "Opening:" + file name
         JOptionPane.showMessageDialog(null, string); //show message dialog
       } else {
-        String string = "Open command canceled by user."; //messageg dialog "Open command canceled by user."
+        String string = "Open command canceled by user."; //a dialog "Open command canceled by user." when user cancel.
         JOptionPane.showMessageDialog(null, string); //show message dialog
       }
     } else if (e.getSource() == saveItem) {
-      JFileChooser saveChooser = new JFileChooser();
-      int option = saveChooser.showSaveDialog(this);
+      saveChooser = new JFileChooser();
+      int option = saveChooser.showSaveDialog(this); // Showing a dialog box to select the file to save.
       if (option == JFileChooser.APPROVE_OPTION) {
         File file = saveChooser.getSelectedFile();
         String string = "Save file as:" + file.getAbsolutePath();
         JOptionPane.showMessageDialog(null, string);
       } else {
-        String string = "Save command canceled by user.";
+        String string = "Save command canceled by user."; //a dialog "Save command canceled by user." when user cancel.
         JOptionPane.showMessageDialog(null, string);
       }
     }
