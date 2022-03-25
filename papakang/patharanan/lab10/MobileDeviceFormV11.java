@@ -5,11 +5,9 @@
  */
 package papakang.patharanan.lab10;
 
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.event.KeyEvent;
-import javax.swing.JMenuItem;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
 
@@ -23,74 +21,43 @@ public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
   /**
    * Add a menu item to the color menu that allows the user to select a custom color
    */
-  protected void addSubMenus() {
-    super.addSubMenus();
+  @Override
+  protected void addMenus() {
+    super.addMenus();
     customColorItem = new JMenuItem("Custom...");
     colorSubMenu.add(customColorItem);
+    setKeys();
   }
 
   /**
    * * Set the mnemonic for each menu item
    */
-  protected void setMenuMnemonic() {
-    fileMenu.setMnemonic(KeyEvent.VK_F);
-    newItem.setMnemonic(KeyEvent.VK_N);
-    openItem.setMnemonic(KeyEvent.VK_O);
-    saveItem.setMnemonic(KeyEvent.VK_S);
-    exitItem.setMnemonic(KeyEvent.VK_X);
-    configMenu.setMnemonic(KeyEvent.VK_C);
-    colorSubMenu.setMnemonic(KeyEvent.VK_L);
-    redColorItem.setMnemonic(KeyEvent.VK_R);
-    greenColorItem.setMnemonic(KeyEvent.VK_G);
-    blueColorItem.setMnemonic(KeyEvent.VK_B);
-    customColorItem.setMnemonic(KeyEvent.VK_U);
+  protected void setKeys() {
+    setMneAndAcc(fileMenu, KeyEvent.VK_F);
+    setMneAndAcc(newItem, KeyEvent.VK_N);
+    setMneAndAcc(openItem, KeyEvent.VK_O);
+    setMneAndAcc(saveItem, KeyEvent.VK_S);
+    setMneAndAcc(exitItem, KeyEvent.VK_X);
+    setMneAndAcc(configMenu, KeyEvent.VK_C);
+    setMneAndAcc(colorSubMenu, KeyEvent.VK_L);
+    setMneAndAcc(redColorItem, KeyEvent.VK_R);
+    setMneAndAcc(greenColorItem, KeyEvent.VK_G);
+    setMneAndAcc(blueColorItem, KeyEvent.VK_B);
+    setMneAndAcc(customColorItem, KeyEvent.VK_U);
   }
 
-  /**
-   * set menu accelerator  for each menu item
-   */
-  protected void setMenuAccelerator() {
-    KeyStroke ctrlN = KeyStroke.getKeyStroke(
-      KeyEvent.VK_N,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-    KeyStroke ctrlO = KeyStroke.getKeyStroke(
-      KeyEvent.VK_O,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-    KeyStroke ctrlS = KeyStroke.getKeyStroke(
-      KeyEvent.VK_S,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-    KeyStroke ctrlX = KeyStroke.getKeyStroke(
-      KeyEvent.VK_X,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-    KeyStroke ctrlR = KeyStroke.getKeyStroke(
-      KeyEvent.VK_R,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-    KeyStroke ctrlG = KeyStroke.getKeyStroke(
-      KeyEvent.VK_G,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-    KeyStroke ctrlB = KeyStroke.getKeyStroke(
-      KeyEvent.VK_B,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-    KeyStroke ctrlU = KeyStroke.getKeyStroke(
-      KeyEvent.VK_U,
-      Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
-    );
-
-    newItem.setAccelerator(ctrlN);
-    openItem.setAccelerator(ctrlO);
-    saveItem.setAccelerator(ctrlS);
-    exitItem.setAccelerator(ctrlX);
-    redColorItem.setAccelerator(ctrlR);
-    greenColorItem.setAccelerator(ctrlG);
-    blueColorItem.setAccelerator(ctrlB);
-    customColorItem.setAccelerator(ctrlU);
+  protected void setMneAndAcc(JMenuItem menuItem, int key) {
+    if (menuItem instanceof JMenu) {
+      menuItem.setMnemonic(key);
+    } else {
+      menuItem.setMnemonic(key);
+      menuItem.setAccelerator(
+        KeyStroke.getKeyStroke(
+          key,
+          Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()
+        )
+      );
+    }
   }
 
   public static void createAndShowGUI() {
@@ -101,8 +68,6 @@ public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
     mobileDeviceFromV11.addMenus();
     mobileDeviceFromV11.addListeners();
     mobileDeviceFromV11.setFrameFeatures();
-    mobileDeviceFromV11.setMenuAccelerator();
-    mobileDeviceFromV11.setMenuMnemonic();
   }
 
   public static void main(String[] args) {

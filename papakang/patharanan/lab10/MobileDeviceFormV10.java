@@ -9,7 +9,6 @@
 package papakang.patharanan.lab10;
 
 import java.awt.*;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import javax.swing.*;
@@ -19,8 +18,8 @@ import papakang.patharanan.lab9.MobileDeviceFormV9;
 public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
 
   // This is a way to declare a protected member variable.
-  protected JFileChooser fileChooser, saveChooser;
-  protected Font font16Plain, font20Plain, font24Plain;
+  protected JFileChooser fileChooser = new JFileChooser();
+  protected File file;
 
   public MobileDeviceFormV10(String titel) {
     super(titel);
@@ -95,10 +94,9 @@ public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
       //call method setFont and size of font is 24
       setFont(24);
     } else if (e.getSource() == openItem) {
-      fileChooser = new JFileChooser();
       int option = fileChooser.showOpenDialog(this); // Showing a dialog box to select the file to open.
       if (option == JFileChooser.APPROVE_OPTION) {
-        File file = fileChooser.getSelectedFile(); //Returns the selected file.
+        file = fileChooser.getSelectedFile(); //Returns the selected file.
         String string = "Opening:" + file.getName(); //a dialog "Opening:" + file name
         JOptionPane.showMessageDialog(null, string); //show message dialog
       } else {
@@ -106,10 +104,9 @@ public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
         JOptionPane.showMessageDialog(null, string); //show message dialog
       }
     } else if (e.getSource() == saveItem) {
-      saveChooser = new JFileChooser();
-      int option = saveChooser.showSaveDialog(this); // Showing a dialog box to select the file to save.
+      int option = fileChooser.showSaveDialog(this); // Showing a dialog box to select the file to save.
       if (option == JFileChooser.APPROVE_OPTION) {
-        File file = saveChooser.getSelectedFile();
+        file = fileChooser.getSelectedFile();
         String string = "Save file as:" + file.getAbsolutePath();
         JOptionPane.showMessageDialog(null, string);
       } else {

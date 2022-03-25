@@ -17,7 +17,6 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
   protected JRadioButtonMenuItem fgButtonMenuIt, bgButtonMenuIt;
   protected JColorChooser colorChooser;
   ButtonGroup colorGroup;
-  String selectedArea;
 
   public MobileDeviceFormV12(String titel) {
     super(titel);
@@ -28,7 +27,6 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
     super.addMenus();
     areaMenu = new JMenu("Area");
     menuBar.add(areaMenu);
-    this.setJMenuBar(menuBar);
   }
 
   public void colorChooser() {
@@ -116,8 +114,6 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
     mobileDeviceFromV12.addMenus();
     mobileDeviceFromV12.addListeners();
     mobileDeviceFromV12.setFrameFeatures();
-    mobileDeviceFromV12.setMenuAccelerator();
-    mobileDeviceFromV12.setMenuMnemonic();
     mobileDeviceFromV12.colorChooser();
   }
 
