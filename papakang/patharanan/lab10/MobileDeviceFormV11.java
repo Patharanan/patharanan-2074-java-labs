@@ -20,6 +20,7 @@ public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
 
   /**
    * Add a menu item to the color menu that allows the user to select a custom color
+   * and set mnemonic and accelerator keys for a menu item.
    */
   @Override
   protected void addMenus() {
@@ -30,7 +31,7 @@ public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
   }
 
   /**
-   * * Set the mnemonic for each menu item
+   * * Set the menu item's mnemonic and accelerator key
    */
   protected void setKeys() {
     setMneAndAcc(fileMenu, KeyEvent.VK_F);
@@ -46,6 +47,12 @@ public class MobileDeviceFormV11 extends MobileDeviceFormV10 {
     setMneAndAcc(customColorItem, KeyEvent.VK_U);
   }
 
+  /**
+   * If it's jmenu, just set Mnemonic
+   * If it's jmenu item, just set Mnemonic and Accelerator.
+   * @param menuItem
+   * @param key
+   */
   protected void setMneAndAcc(JMenuItem menuItem, int key) {
     if (menuItem instanceof JMenu) {
       menuItem.setMnemonic(key);
