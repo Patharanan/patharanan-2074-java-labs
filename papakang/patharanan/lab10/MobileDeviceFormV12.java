@@ -28,6 +28,9 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
     colorGroup = new ButtonGroup();
     fgButtonMenuIt = new JRadioButtonMenuItem("Foreground");
     bgButtonMenuIt = new JRadioButtonMenuItem("Background");
+
+    fgButtonMenuIt.setSelected(true);
+
     colorGroup.add(fgButtonMenuIt);
     colorGroup.add(bgButtonMenuIt);
 
@@ -90,23 +93,6 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
         setColor(color);
       }
     }
-    // if (fgButtonMenuIt.isSelected()) {
-    //   Color initialBackground = txtBrand.getForeground();
-    //   Color color = JColorChooser.showDialog(
-    //     this,
-    //     "Choose Color",
-    //     initialBackground
-    //   );
-    //   setColorForeground(color);
-    // } else if (bgButtonMenuIt.isSelected()) {
-    //   Color initialBackground = txtBrand.getBackground();
-    //   Color color = JColorChooser.showDialog(
-    //     this,
-    //     "Choose Color",
-    //     initialBackground
-    //   );
-    //   setColorBackground(color);
-    // }
   }
 
   @Override

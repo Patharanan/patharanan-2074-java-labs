@@ -76,8 +76,7 @@ public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
     } else if (e.getSource() == greenColorItem) { //when event is greenColorItem
       //calling method setColor to set text color to green color.
       setColor(Color.green);
-    }
-    if (e.getSource() == size16Item) { //when event is size16Item
+    } else if (e.getSource() == size16Item) { //when event is size16Item
       //call method setFont and size of font is 16
       setFont(16);
     } else if (e.getSource() == size20Item) { //when event is size20Item
