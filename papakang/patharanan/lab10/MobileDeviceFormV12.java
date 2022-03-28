@@ -23,12 +23,21 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
     //TODO Auto-generated constructor stub
   }
 
+  /**
+   * This method add areaMenu to menuBar
+   */
   public void addMenus() {
     super.addMenus();
     areaMenu = new JMenu("Area");
     menuBar.add(areaMenu);
   }
 
+  /**
+   * Create a button group and add Foreground radio button and Background radio button to it.
+   *
+   *
+   * Add the radio buttons to the main panel and the menu.
+   */
   public void colorChooser() {
     colorGroup = new ButtonGroup();
     fgButtonMenuIt = new JRadioButtonMenuItem("Foreground");
@@ -46,6 +55,11 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
     areaMenu.add(bgButtonMenuIt);
   }
 
+  /**
+   * This method is set foreground and background.
+   * If foreground button is selected then set foreground color to the selected color.
+   * If background button is selected then set background color to thee selected color.
+   */
   @Override
   protected void setColor(Color color) {
     if (fgButtonMenuIt.isSelected()) {
@@ -75,6 +89,14 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
     }
   }
 
+  /**
+   * This method is condition object from user.
+   * If  the user selects the "Custom Color" menu item, then show a color chooser dialog.
+   * If the user selected the "Foreground" menu item, then set the foreground color to the selected color.
+   * If the user selected the "Background" menu item, then set the background color to the selected color.
+   *
+   * @param e The event that the action.
+   */
   @Override
   public void actionPerformed(ActionEvent e) {
     super.actionPerformed(e);
@@ -100,6 +122,9 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
     }
   }
 
+  /**
+   *This method is add this ActionListener to customColorItem
+   */
   @Override
   public void addListeners() {
     super.addListeners();
