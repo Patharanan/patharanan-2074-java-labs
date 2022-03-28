@@ -58,7 +58,7 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
   /**
    * This method is set foreground and background.
    * If foreground button is selected then set foreground color to the selected color.
-   * If background button is selected then set background color to thee selected color.
+   * If background button is selected then set background color to the selected color.
    */
   @Override
   protected void setColor(Color color) {
@@ -92,8 +92,8 @@ public class MobileDeviceFormV12 extends MobileDeviceFormV11 {
   /**
    * This method is condition object from user.
    * If  the user selects the "Custom Color" menu item, then show a color chooser dialog.
-   * If the user selected the "Foreground" menu item, then set the foreground color to the selected color.
-   * If the user selected the "Background" menu item, then set the background color to the selected color.
+   * If the user select the "Foreground" menu item, then set the foreground color to the selected color.
+   * If the user select the "Background" menu item, then set the background color to the selected color.
    *
    * @param e The event that the action.
    */
