@@ -61,7 +61,6 @@ public class MobileDeviceFormV7
       };
 
       JOptionPane.showMessageDialog(null, total);
-      System.exit(0);
     }
   }
 

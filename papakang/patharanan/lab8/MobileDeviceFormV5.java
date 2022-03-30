@@ -39,7 +39,7 @@ public class MobileDeviceFormV5 extends MobileDeviceFormV4 {
     txtModel.setText("iPad Air");
     txtColor.setText("Silver");
     txtWeight.setText("0.469");
-    txtPrice.setText("24,900.00");
+    txtPrice.setText("24900.00");
 
     reviewTxtArea.setText(
       "The iPad Air is Apple's mid-range tablet and the current model features a new design with flat edges, the A14 Bionic chip,a USB-C port, Touch ID, a range of color options, and more."

@@ -28,7 +28,7 @@ public class MobileDeviceFormV3 extends MobileDeviceFormV2 {
    * Adds the colorItem and sizeItem to the menuConfig.
    * Adds the menuFile and menuConfig to the menuBar.
    */
-  public void addMenus() {
+  protected void addMenus() {
     openItem = new JMenuItem("Open");
     saveItem = new JMenuItem("Save");
     exitItem = new JMenuItem("Exit");
