@@ -33,12 +33,13 @@ public class MobileDeviceFormV14 extends MobileDeviceFormV13 {
   @Override
   public void actionPerformed(ActionEvent e) {
     super.actionPerformed(e);
+    Object src = e.getSource();
 
-    if (e.getSource() == displayItem) {
+    if (src == displayItem) {
       for (MobileDeviceV2 i : deviceList) {
         System.out.println(i);
       }
-    }
+    } else if (src == sortItem) {}
   }
 
   @Override

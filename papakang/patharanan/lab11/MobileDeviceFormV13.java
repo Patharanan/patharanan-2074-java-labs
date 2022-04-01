@@ -30,9 +30,11 @@ public class MobileDeviceFormV13 extends MobileDeviceFormV12 {
       );
 
       deviceList.add(mobileDeviceV2);
+      System.out.print("[");
       for (MobileDeviceV2 i : deviceList) {
         System.out.println(i);
       }
+      System.out.println("]");
     }
   }
 

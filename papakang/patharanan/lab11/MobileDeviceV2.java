@@ -28,7 +28,7 @@ public class MobileDeviceV2 extends MobileDevice {
   @Override
   public String toString() {
     String string = String.format(
-      "[ Brand Name :%s, Model Name : %S, Color : %s, Weight :%.3f, Price :%.1f, Mobile OS : %s, Type : %s ]",
+      " Brand Name :%s, Model Name : %S, Color : %s, Weight :%.3f, Price :%.1f, Mobile OS : %s, Type : %s ",
       brandName,
       modelName,
       color,
