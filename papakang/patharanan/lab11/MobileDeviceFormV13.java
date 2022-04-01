@@ -44,6 +44,7 @@ public class MobileDeviceFormV13 extends MobileDeviceFormV12 {
     mobileDeviceFromV13.addMenus();
     mobileDeviceFromV13.addListeners();
     mobileDeviceFromV13.setFrameFeatures();
+    mobileDeviceFromV13.colorChooser();
   }
 
   public static void main(String[] args) {
