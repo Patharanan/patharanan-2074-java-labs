@@ -38,7 +38,7 @@ public class MobileDeviceFormV13 extends MobileDeviceFormV12 {
 
   public static void createAndShowGUI() {
     MobileDeviceFormV13 mobileDeviceFromV13 = new MobileDeviceFormV13(
-      "Mobile Device Form V10"
+      "Mobile Device Form V13"
     );
     mobileDeviceFromV13.addComponents();
     mobileDeviceFromV13.addMenus();
