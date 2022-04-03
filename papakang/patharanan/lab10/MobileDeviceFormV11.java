@@ -1,7 +1,7 @@
 /**This program add the menu item “Custom …” for menu “Color”
  * and set mnemonic and accelerator keys for a menu item
  * @Auther Patharanan Papakang
- * @Version 1 22,11 Mar,2022
+ * @Version 1 22, Mar,2022
  */
 package papakang.patharanan.lab10;
 

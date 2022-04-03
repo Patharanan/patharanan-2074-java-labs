@@ -3,7 +3,7 @@
  *  An open file chooser dialog is shown when the menu item Open is selected.
  *   A save file chooser dialog is shown when the menu item Save is selected.
  * @Auther Patharanan Papakang
- * @Version 1 21,11 Mar,2022
+ * @Version 1 21, Mar,2022
  */
 
 package papakang.patharanan.lab10;

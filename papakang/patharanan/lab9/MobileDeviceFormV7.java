@@ -21,11 +21,12 @@ public class MobileDeviceFormV7
 
   /**
    * Override the method actionPerformed()
-   * When the OK button is pressed a dialog is displayed showing all the information that is currently input. This includes Brand name, Model name, Color, Weight, Price, Mobile OS, Type, Review, and Features.
+   *
    * For components that have multiple selections
    * When the Cancel button is pressed, all the text fields and text area will be empty.
    * The Mobile OS will be reset back to Android. Type resets Phone. And all item in Features will be deselected
    */
+
   @Override
   public void actionPerformed(ActionEvent e) { //e is event object
     Object srcObj = e.getSource();
@@ -43,25 +44,33 @@ public class MobileDeviceFormV7
       reviewTxtArea.setText("");
       featuresList.clearSelection();
     } else if (srcObj == okButton) {
-      String[] total = {
-        "Brand Name : " + txtBrand.getText(),
-        "Model Name : " + txtModel.getText(),
-        "Color : " + txtColor.getText(),
-        "Weight(kg.) : " + txtWeight.getText(),
-        "Price(Baht) : " + txtPrice.getText(),
-        "Mobile OS : " + mobileGrp.getSelection().getActionCommand(),
-        "Type : " + typeComboBox.getSelectedItem(),
-        "Review : " + reviewTxtArea.getText(),
-        "Features : " +
-        featuresList
-          .getSelectedValuesList()
-          .toString()
-          .replace("[", "")
-          .replace("]", ""),
-      };
-
-      JOptionPane.showMessageDialog(null, total);
+      actionOKButton();
     }
+  }
+
+  /**
+   * When the OK button is pressed a dialog is displayed showing all the information that is currently input.
+   * This includes Brand name, Model name, Color, Weight, Price, Mobile OS, Type, Review, and Features.
+   */
+  public void actionOKButton() {
+    String[] total = {
+      "Brand Name : " + txtBrand.getText(),
+      "Model Name : " + txtModel.getText(),
+      "Color : " + txtColor.getText(),
+      "Weight(kg.) : " + txtWeight.getText(),
+      "Price(Baht) : " + txtPrice.getText(),
+      "Mobile OS : " + mobileGrp.getSelection().getActionCommand(),
+      "Type : " + typeComboBox.getSelectedItem(),
+      "Review : " + reviewTxtArea.getText(),
+      "Features : " +
+      featuresList
+        .getSelectedValuesList()
+        .toString()
+        .replace("[", "")
+        .replace("]", ""),
+    };
+
+    JOptionPane.showMessageDialog(null, total);
   }
 
   public void addListeners() {

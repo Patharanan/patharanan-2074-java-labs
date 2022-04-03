@@ -3,7 +3,7 @@
  * the program then will change the foreground colors of all components accordingly
  * When the user chooses the menu “Custom color”, the app will open the color chooser
  * @Auther Patharanan Papakang
- * @Version 1 24,11 Mar,2022
+ * @Version 1 24, Mar,2022
  */
 package papakang.patharanan.lab10;
 
