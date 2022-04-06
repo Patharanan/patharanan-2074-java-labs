@@ -94,25 +94,39 @@ public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
       //call method setFont and size of font is 24
       setFont(24);
     } else if (e.getSource() == openItem) {
-      int option = fileChooser.showOpenDialog(this); // Showing a dialog box to select the file to open.
-      if (option == JFileChooser.APPROVE_OPTION) {
-        file = fileChooser.getSelectedFile(); //Returns the selected file.
-        String string = "Opening:" + file.getName(); //a dialog "Opening:" + file name
-        JOptionPane.showMessageDialog(null, string); //show message dialog
-      } else {
-        String string = "Open command canceled by user."; //a dialog "Open command canceled by user." when user cancel.
-        JOptionPane.showMessageDialog(null, string); //show message dialog
-      }
+      actionOpen();
     } else if (e.getSource() == saveItem) {
-      int option = fileChooser.showSaveDialog(this); // Showing a dialog box to select the file to save.
-      if (option == JFileChooser.APPROVE_OPTION) {
-        file = fileChooser.getSelectedFile();
-        String string = "Save file as:" + file.getAbsolutePath();
-        JOptionPane.showMessageDialog(null, string);
-      } else {
-        String string = "Save command canceled by user."; //a dialog "Save command canceled by user." when user cancel.
-        JOptionPane.showMessageDialog(null, string);
-      }
+      actionSave();
+    }
+  }
+
+  /**
+   * Show a dialog box to select the file to save
+   */
+  public void actionSave() {
+    int option = fileChooser.showSaveDialog(this); // Showing a dialog box to select the file to save.
+    if (option == JFileChooser.APPROVE_OPTION) {
+      file = fileChooser.getSelectedFile();
+      String string = "Save file as:" + file.getPath();
+      JOptionPane.showMessageDialog(null, string);
+    } else {
+      String string = "Save command canceled by user."; //a dialog "Save command canceled by user." when user cancel.
+      JOptionPane.showMessageDialog(null, string);
+    }
+  }
+
+  /**
+   * Show a dialog box to select the file to open
+   */
+  public void actionOpen() {
+    int option = fileChooser.showOpenDialog(this); // Showing a dialog box to select the file to open.
+    if (option == JFileChooser.APPROVE_OPTION) {
+      file = fileChooser.getSelectedFile(); //Returns the selected file.
+      String string = "Opening:" + file.getName(); //a dialog "Opening:" + file name
+      JOptionPane.showMessageDialog(null, string); //show message dialog
+    } else {
+      String string = "Open command canceled by user."; //a dialog "Open command canceled by user." when user cancel.
+      JOptionPane.showMessageDialog(null, string); //show message dialog
     }
   }
 
