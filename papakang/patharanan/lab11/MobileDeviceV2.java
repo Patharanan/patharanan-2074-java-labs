@@ -1,5 +1,7 @@
 /**
  * This program is get and set param of object.
+ * @Auther Patharanan Papakang
+ * @Version 1 25 Mar,2022
  */
 
 package papakang.patharanan.lab11;
