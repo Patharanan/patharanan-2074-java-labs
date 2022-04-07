@@ -67,8 +67,8 @@ public class MobileDeviceFormV10 extends MobileDeviceFormV9 {
   }
 
   /**
-   * This method set text color,font,size
-   *
+   * This method set action for menu item to set text color,font,size
+   * And save menu item,open menu item.
    *
    */
   @Override
